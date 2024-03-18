@@ -1,0 +1,22 @@
+{
+    "extends": ["airbnb-base", "plugin:@typescript-eslint/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      // adicione regras específicas conforme necessário
+    },
+    "import/no-extraneous-dependencies":[
+        "error",
+        {
+           "devDependencies":[
+              "**/*.test.ts",
+              "**/*.test.tsx"
+           ]
+        }
+      ]
+  }
+  
