@@ -8,9 +8,8 @@
     "prepare": "husky || true",
     "lint": "eslint . --ext .ts,.js",
     "lint:fix": "eslint . --ext .ts,.js --fix",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "start": "node src/index.js",
-    "build": "tsc"
+    "start": "node index.js",
+    "build": "tsc index.ts"
   },
   "keywords": [],
   "author": "xl8",
