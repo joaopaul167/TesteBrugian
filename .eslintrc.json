@@ -8,15 +8,6 @@
     "plugins": ["@typescript-eslint"],
     "rules": {
       // adicione regras específicas conforme necessário
-    },
-    "import/no-extraneous-dependencies":[
-        "error",
-        {
-           "devDependencies":[
-              "**/*.test.ts",
-              "**/*.test.tsx"
-           ]
-        }
-      ]
+    }
   }
   

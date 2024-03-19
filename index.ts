@@ -15,12 +15,11 @@ const throttle = async (workers: number, tasks: Task[]) => {
   const results: number[] = [];
 
   async function runTask(task: Task, index: number) {
-    await task().then((result) => {
-      results[index] = result;
-    });
+    const result = await task();
+    results[index] = result;
   }
 
-  await Promise.all(
+  await Promise.allSettled(
     tasks.map(async (task, index) => {
       const workerIndex = await Promise.race(
         semaphore.map((_, i) => Promise.resolve(i)),
